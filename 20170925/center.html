@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平垂直置中</title>
+    <style>
+        /* 水平置中使用text-align: center; */
+        
+        /* 垂直置中:
+           1.使用line-height行高 */
+        .container {
+            width: 600px;
+            height: 400px;
+            background-color: #c7c7c7;
+        }
+        .box {
+            text-align: center;
+            line-height: 400px; /* 適合單行文字 */
+        }
+        
+        /* 2.使用vertical-align: middle */
+        .container2 {
+            width: 600px;
+            height: 400px;
+            background-color: #c7c7c7;
+            display: table; /* 使用"假表格" */
+        }
+        .box2 {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        
+        /* 3.使用虛擬元素::before */
+        .container3 {
+            width: 600px;
+            height: 400px;
+            background-color: #c7c7c7;
+            text-align: center;
+        }
+        .container3::before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+        }
+        .box3 {
+            display: inline-block;
+            vertical-align: middle;
+            background-color: #64b7ff;
+            width: 300px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>QWERTY</h1>
+        </div>
+    </div>
+    <br><hr>
+    <div class="container2">
+        <div class="box2">
+            <h1>QWERTY</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quo temporibus animi neque illo ex a maiores, tempore atque blanditiis laudantium sint error eos, natus aliquam cum repellat perferendis eveniet.</p>
+        </div>
+    </div>
+    <br><hr>
+    <div class="container3">
+        <div class="box3">
+            <h1>QWERTY</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quo temporibus animi neque illo ex a maiores, tempore atque blanditiis laudantium sint error eos, natus aliquam cum repellat perferendis eveniet.</p>
+        </div>
+    </div>
+</body>
+</html>

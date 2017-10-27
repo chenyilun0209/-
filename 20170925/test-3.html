@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直水平置中練習</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 300px;
+            background-color: #e5e5e5;
+            font-size: 0;
+            text-align: center;
+        }
+        .container::before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+        }
+        .container .pic {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            vertical-align: middle;
+            background-color: #d2f1ff;
+        }
+
+        .container .content {
+            width: 260px;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 18px;
+            text-align: left;
+            margin-left: 20px
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="pic">
+        <img src="img/001.jpg" width="200px" height="200px">
+        </div>
+        <div class="content">
+            <h3>QWERTY</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            <a href="#">MORE</a>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="pic">
+        <img src="img/002.jpg" width="200px" height="200px">
+        </div>
+        <div class="content">
+            <h3>QWERTY</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            <a href="#">MORE</a>
+        </div>
+    </div>
+
+</body>
+</html>

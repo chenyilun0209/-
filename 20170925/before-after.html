@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        
+        h1::after { 
+            content: "之後";
+        }
+        h1::before {
+            content: "之前";
+        }
+        .container {
+            width: 640px;
+            background-color: #cbcbcb;
+            margin: auto;
+        }
+        .box {
+            width: 300px;
+            background-color: #9fd3f8;
+            float: left;
+            margin: 10px;
+        }
+        .clearfix::after { /* 解決浮動問題，解法3 */
+            content: ""; /* 空內容 */
+            display: block; /* 轉成區塊 */
+            clear: both; /* 清除對float的影響 */
+        }
+    </style>
+</head>
+<body>
+    <h1>QWERTY</h1>之後
+    <br><hr><br>
+    <div class="container clearfix">
+        <div class="box">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum</div>
+        <div class="box">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators</div>
+    </div>
+</body>
+</html>
