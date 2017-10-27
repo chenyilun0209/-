@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字+背景+區塊樣式</title>
+    
+    <!--網路字體,Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here|Muli:700i" rel="stylesheet">
+    
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanstc.css">
+    
+    <style>
+        * {
+            font-family: "Muli", "Noto Sans Tc";
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #c7e8fd;   
+            background-repeat:no-repeat;/* no-repeat不重複 */
+        }
+        
+        .background {
+            background-image: url(img/008.jpg);
+        }
+        .background2 {
+            background-image: linear-gradient(45deg,#0fc4fa,#00ff9d,#0089ff);
+            /* 漸層色(角度，顏色，顏色) */
+        }
+        .background3 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.15),rgba(255, 252, 252, 0.32)),url(img/001.jpg);
+        }
+        .background4 {
+            background-image: url(img/009.jpg);
+            background-repeat:no-repeat;
+            background-position: center;
+            background-attachment: fixed;/* fixed固定圖片、scroll */
+        }
+        .background5 {
+            background-image: url(img/001.jpg);
+            background-size: cover;/* cover圖片覆蓋背景 */
+        }
+        
+        .txt1 {
+            font-style: italic;
+            font-weight: 200;
+        }
+        .txt2 {
+            font-family: "Just Me Again Down Here";
+        }
+        .txt3 {
+            letter-spacing: 5px; /* 單字距離 */
+            word-spacing: 20px; /* 字母距離 */
+            line-height: 2em; /* 行高 */ 
+        }
+        
+        .liststyle {
+            list-style: square;
+        }
+        .liststyle2 {
+            list-style: lower-roman;
+        }
+        .liststyle3 {
+            list-style: lower-greek;
+        }
+        
+        .spanstyle {
+            color: red;
+            text-decoration: underline;
+        }
+        .boxmodel {
+            width: 200px;
+            height: 200px;
+            border: 10px red groove;
+            margin: 30px;
+            padding: 50px;
+        }
+        .boxmodel2 { /* 行內:沒寬高、內外距沒有上下，所以會重疊 */
+            width: 100px;
+            height: 100px;
+            border: 10px red groove;
+            margin: 30px;
+            padding: 50px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>預設字體:Noto Sans Tc</h1>
+    <p> 
+       一經同伴的牴觸，而且往往因為他是從繁花的山林裡吹度過來他帶來一股幽遠的淡香，而況揶揄還不止此，美慧，但想起我做父親的往迹，也只有她，建蘭與瓊花，就是你媽，甚至有時打滾，你的父親，解嘲已往的一切。彼得，但在澄靜的日光下，有時一澄到底的清澈，他會拉，他年紀雖則小，但我想借這悼念你的機會，活潑的靈魂；你來人間真像是短期的作客，你在時我不知愛惜，我既是你的父親，自由與自在的時候，同是一滴眼淚，怎樣你這小機靈早已看見，或是我們執事的地方，在你住處的客室裡，還是有人成心種著的？我也不易使他懂我的話，給你應得的慈愛，那美秀風景的全部正像畫片似的展露在你的眼前，而況揶揄還不止此，你在時，我們多長一歲年紀往往只是加重我們頭上的枷，梨夢湖與西子湖
+    </p><hr>
+    
+    <h1>default:Muli</h1>
+    <p> 
+       It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    </p><hr>
+    
+    <h1>斜體與粗體</h1>
+    <p class="txt1"> 
+       一經同伴的牴觸，而且往往因為他是從繁花的山林裡吹度過來他帶來一股幽遠的淡香，而況揶揄還不止此，美慧，但想起我做父親的往迹，也只有她，建蘭與瓊花，就是你媽，甚至有時打滾，你的父親，解嘲已往的一切。彼得，但在澄靜的日光下，有時一澄到底的清澈，他會拉，他年紀雖則小，但我想借這悼念你的機會，活潑的靈魂；你來人間真像是短期的作客，你在時我不知愛惜，我既是你的父親，自由與自在的時候，同是一滴眼淚，怎樣你這小機靈早已看見，或是我們執事的地方，在你住處的客室裡，還是有人成心種著的？我也不易使他懂我的話，給你應得的慈愛，那美秀風景的全部正像畫片似的展露在你的眼前，而況揶揄還不止此，你在時，我們多長一歲年紀往往只是加重我們頭上的枷，梨夢湖與西子湖
+    </p><hr>
+    
+    <h1>Google Fonts:Just Me Again Down Here</h1>
+    <p class="txt2"> 
+       It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    </p><hr>
+    
+    <h1>文字距離</h1>
+    <p class="txt3"> 
+       一經同伴的牴觸，而且往往因為他是從繁花的山林裡吹度過來他帶來一股幽遠的淡香，而況揶揄還不止此，美慧，但想起我做父親的往迹，也只有她，建蘭與瓊花，就是你媽，甚至有時打滾，你的父親，解嘲已往的一切。彼得，但在澄靜的日光下，有時一澄到底的清澈，他會拉，他年紀雖則小，但我想借這悼念你的機會，活潑的靈魂；你來人間真像是短期的作客，你在時我不知愛惜，我既是你的父親，自由與自在的時候，同是一滴眼淚，怎樣你這小機靈早已看見，或是我們執事的地方，在你住處的客室裡，還是有人成心種著的？
+    </p>
+    <p class="txt3"> 
+       It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+    </p><hr>
+    
+    <h1>背景圖片</h1>
+    <div class="background">
+    <p> 
+       一經同伴的牴觸，而且往往因為他是從繁花的山林裡吹度過來他帶來一股幽遠的淡香，而況揶揄還不止此，美慧，但想起我做父親的往迹，也只有她，建蘭與瓊花，就是你媽，甚至有時打滾，你的父親，解嘲已往的一切。彼得，但在澄靜的日光下，有時一澄到底的清澈，他會拉，他年紀雖則小，但我想借這悼念你的機會，活潑的靈魂；你來人間真像是短期的作客，你在時我不知愛惜，我既是你的父親，自由與自在的時候，同是一滴眼淚，怎樣你這小機靈早已看見，或是我們執事的地方，在你住處的客室裡，還是有人成心種著的？我也不易使他懂我的話，給你應得的慈愛，那美秀風景的全部正像畫片似的展露在你的眼前，而況揶揄還不止此，你在時，我們多長一歲年紀往往只是加重我們頭上的枷，梨夢湖與西子湖，她也何嘗有一天接近過快樂與幸福，別管他模樣不佳，卻難尋同樣的淚晶。我怕我只能看作水面上的雲影，並且在他活潑的神情裏我想見了你，你媽與你七舅站在旁邊止不住滴淚，這才覺著父性的愛像泉眼似的在性靈裏汩汩的流出：只可惜是遲了，有時一澄到底的清澈，葛德說，與自然同在一個脈搏裡跳動，誰沒有悵惘？她也何嘗有一天接近過快樂與幸福，為什麼要到這時候，誰沒有怨，許是恨，我只是悵惘，雲彩裡，你才知道靈魂的愉快是怎樣的，我們渾樸的天真是像含羞草似的嬌柔，我們應得感謝上蒼的是他不可度量的心裁，你得有力量翻起那岩石才能把它不傷損的連根起出誰知道那根長的多深！苦惱時有安慰，只是這無恩的長路，我，這次我再來歐洲你已經早一個星期回去，你盡可以不用領結，我問為什麼，遠山上不起靄，一經同伴的牴觸，他才知道這路的難走；但為什麼有荊棘？
+    </p></div><hr>
+    
+    <h1>漸層色背景</h1>
+    <div class="background2">
+    <p> 
+       一經同伴的牴觸，而且往往因為他是從繁花的山林裡吹度過來他帶來一股幽遠的淡香，而況揶揄還不止此，美慧，但想起我做父親的往迹，也只有她，建蘭與瓊花，就是你媽，甚至有時打滾，你的父親，解嘲已往的一切。彼得，但在澄靜的日光下，有時一澄到底的清澈，他會拉，他年紀雖則小，但我想借這悼念你的機會，活潑的靈魂；你來人間真像是短期的作客，你在時我不知愛惜，我既是你的父親，自由與自在的時候，同是一滴眼淚，怎樣你這小機靈早已看見，或是我們執事的地方，在你住處的客室裡，還是有人成心種著的？我也不易使他懂我的話，給你應得的慈愛，那美秀風景的全部正像畫片似的展露在你的眼前，而況揶揄還不止此，你在時，我們多長一歲年紀往往只是加重我們頭上的枷，梨夢湖與西子湖，她也何嘗有一天接近過快樂與幸福，別管他模樣不佳，卻難尋同樣的淚晶。我怕我只能看作水面上的雲影，並且在他活潑的神情裏我想見了你，你媽與你七舅站在旁邊止不住滴淚，這才覺著父性的愛像泉眼似的在性靈裏汩汩的流出：只可惜是遲了，有時一澄到底的清澈，葛德說，與自然同在一個脈搏裡跳動，誰沒有悵惘？她也何嘗有一天接近過快樂與幸福，為什麼要到這時候，誰沒有怨，許是恨，我只是悵惘，雲彩裡，你才知道靈魂的愉快是怎樣的，我們渾樸的天真是像含羞草似的嬌柔，我們應得感謝上蒼的是他不可度量的心裁，你得有力量翻起那岩石才能把它不傷損的連根起出誰知道那根長的多深！苦惱時有安慰，只是這無恩的長路，我，這次我再來歐洲你已經早一個星期回去，你盡可以不用領結，我問為什麼，遠山上不起靄，一經同伴的牴觸，他才知道這路的難走；但為什麼有荊棘？
+    </p></div><hr>
+    
+    <h1>顏色+圖片背景</h1>
+    <div class="background3">
+    <p> 
+       一經同伴的牴觸，而且往往因為他是從繁花的山林裡吹度過來他帶來一股幽遠的淡香，而況揶揄還不止此，美慧，但想起我做父親的往迹，也只有她，建蘭與瓊花，就是你媽，甚至有時打滾，你的父親，解嘲已往的一切。彼得，但在澄靜的日光下，有時一澄到底的清澈，他會拉，他年紀雖則小，但我想借這悼念你的機會，活潑的靈魂；你來人間真像是短期的作客，你在時我不知愛惜，我既是你的父親，自由與自在的時候，同是一滴眼淚，怎樣你這小機靈早已看見，或是我們執事的地方，在你住處的客室裡，還是有人成心種著的？我也不易使他懂我的話，給你應得的慈愛，那美秀風景的全部正像畫片似的展露在你的眼前，而況揶揄還不止此，你在時，我們多長一歲年紀往往只是加重我們頭上的枷，梨夢湖與西子湖，她也何嘗有一天接近過快樂與幸福，別管他模樣不佳，卻難尋同樣的淚晶。我怕我只能看作水面上的雲影，並且在他活潑的神情裏我想見了你，你媽與你七舅站在旁邊止不住滴淚，這才覺著父性的愛像泉眼似的在性靈裏汩汩的流出：只可惜是遲了，有時一澄到底的清澈，葛德說，與自然同在一個脈搏裡跳動，誰沒有悵惘？她也何嘗有一天接近過快樂與幸福，為什麼要到這時候，誰沒有怨，許是恨，我只是悵惘，雲彩裡，你才知道靈魂的愉快是怎樣的，我們渾樸的天真是像含羞草似的嬌柔，我們應得感謝上蒼的是他不可度量的心裁，你得有力量翻起那岩石才能把它不傷損的連根起出誰知道那根長的多深！苦惱時有安慰，只是這無恩的長路，我，這次我再來歐洲你已經早一個星期回去，你盡可以不用領結，我問為什麼，遠山上不起靄，一經同伴的牴觸，他才知道這路的難走；但為什麼有荊棘？
+    </p></div><hr>
+    
+    <h1>背景圖片位置+固定</h1>
+    <div class="background4" style="height: 400px">
+    <p> 
+       一經同伴的牴觸，而且往往因為他是從繁花的山林裡吹度過來他帶來一股幽遠的淡香，而況揶揄還不止此，美慧，但想起我做父親的往迹，也只有她，建蘭與瓊花，就是你媽，甚至有時打滾，你的父親，解嘲已往的一切。彼得，但在澄靜的日光下，有時一澄到底的清澈，他會拉，他年紀雖則小，但我想借這悼念你的機會，活潑的靈魂；你來人間真像是短期的作客，你在時我不知愛惜，我既是你的父親，自由與自在的時候，同是一滴眼淚，怎樣你這小機靈早已看見，或是我們執事的地方，在你住處的客室裡，還是有人成心種著的？我也不易使他懂我的話，給你應得的慈愛，那美秀風景的全部正像畫片似的展露在你的眼前，而況揶揄還不止此，你在時，我們多長一歲年紀往往只是加重我們頭上的枷，梨夢湖與西子湖，她也何嘗有一天接近過快樂與幸福，別管他模樣不佳，卻難尋同樣的淚晶。我怕我只能看作水面上的雲影，並且在他活潑的神情裏我想見了你，你媽與你七舅站在旁邊止不住滴淚，這才覺著父性的愛像泉眼似的在性靈裏汩汩的流出：只可惜是遲了，有時一澄到底的清澈，葛德說，與自然同在一個脈搏裡跳動，誰沒有悵惘？她也何嘗有一天接近過快樂與幸福，為什麼要到這時候，誰沒有怨，許是恨，我只是悵惘，雲彩裡，你才知道靈魂的愉快是怎樣的，我們渾樸的天真是像含羞草似的嬌柔，我們應得感謝上蒼的是他不可度量的心裁，你得有力量翻起那岩石才能把它不傷損的連根起出誰知道那根長的多深！苦惱時有安慰，只是這無恩的長路，我，這次我再來歐洲你已經早一個星期回去，你盡可以不用領結，我問為什麼，遠山上不起靄
+    </p></div><hr>
+    
+    <h1>背景圖片覆蓋</h1>
+    <div class="background5" style="height: 400px">
+    <p> 
+       一經同伴的牴觸，而且往往因為他是從繁花的山林裡吹度過來他帶來一股幽遠的淡香，而況揶揄還不止此，美慧，但想起我做父親的往迹，也只有她，建蘭與瓊花，就是你媽，甚至有時打滾，你的父親，解嘲已往的一切。彼得，但在澄靜的日光下，有時一澄到底的清澈，他會拉，他年紀雖則小，但我想借這悼念你的機會，活潑的靈魂；你來人間真像是短期的作客，你在時我不知愛惜，我既是你的父親，自由與自在的時候，同是一滴眼淚，怎樣你這小機靈早已看見，或是我們執事的地方，在你住處的客室裡，還是有人成心種著的？我也不易使他懂我的話，給你應得的慈愛，那美秀風景的全部正像畫片似的展露在你的眼前，而況揶揄還不止此，你在時，我們多長一歲年紀往往只是加重我們頭上的枷，梨夢湖與西子湖，她也何嘗有一天接近過快樂與幸福，別管他模樣不佳，卻難尋同樣的淚晶。我怕我只能看作水面上的雲影，並且在他活潑的神情裏我想見了你，你媽與你七舅站在旁邊止不住滴淚，這才覺著父性的愛像泉眼似的在性靈裏汩汩的流出：只可惜是遲了，有時一澄到底的清澈，葛德說，與自然同在一個脈搏裡跳動，誰沒有悵惘？她也何嘗有一天接近過快樂與幸福，為什麼要到這時候，誰沒有怨，許是恨，我只是悵惘，雲彩裡，你才知道靈魂的愉快是怎樣的，我們渾樸的天真是像含羞草似的嬌柔，我們應得感謝上蒼的是他不可度量的心裁，你得有力量翻起那岩石才能把它不傷損的連根起出誰知道那根長的多深！苦惱時有安慰，只是這無恩的長路
+    </p></div><hr>
+    
+    <h1>清單樣式</h1>
+    <div>
+    <ul class="liststyle">
+        <li>A</li>
+        <li>B</li>
+    </ul>
+    <ul class="liststyle2">
+        <li>A</li>
+        <li>B</li>
+    </ul>
+    <ul class="liststyle3">
+        <li>A</li>
+        <li>B</li>
+    </ul>
+    </div><hr>
+    
+    <h1>Span</h1>
+    <div>
+    <p> 
+       一經同伴的牴觸，而且往往因為他是從繁花的山林裡吹度過來他帶來一股幽遠的淡香，而況揶揄還不止此，美慧，但想起我做父親的往迹，也只有她，建蘭與瓊花，就是你媽，甚至有時打滾，你的父親，解嘲已往的一切。彼得，但在澄靜的日光下，有時一澄到底的清澈，他會拉，他年紀雖則小，但我想借這悼念你的機會，活潑的靈魂；你來人間真像是短期的作客，你在時我不知愛惜，我既是你的父親，<span class="spanstyle">自由與自在的時候，同是一滴眼淚</span>，怎樣你這小機靈早已看見，或是我們執事的地方，在你住處的客室裡，還是有人成心種著的？我也不易使他懂我的話，給你應得的慈愛，那美秀風景的全部正像畫片似的展露在你的眼前，而況揶揄還不止此。
+    </p></div><hr>
+    
+    <h1>Box Model</h1>
+    <div>
+        <div class="boxmodel">Box Model</div>
+        <div class="boxmodel">Box Model</div>
+    </div><br><br><br><br>
+    <div>
+        <span class="boxmodel2">span</span>
+        <span class="boxmodel2">span</span>
+        <span class="boxmodel2">span</span>
+        <span class="boxmodel2">span</span>
+        <span class="boxmodel2">span</span>
+        <span class="boxmodel2">span</span>
+    </div>
+    
+</body>
+</html>

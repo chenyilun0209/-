@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display</title>
+    <style>
+        .container {
+            font-size: 0; /* 將font-size設為0,空隙會消失 */
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #78bcff;
+            display: inline-block;/* 會有空隙 */
+            font-size: 16px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">display:inline-block</div>
+    <div class="box">display:inline-block</div>
+    <div class="box">display:inline-block</div>
+
+    <br><br><br>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+    </div>
+</body>
+</html>

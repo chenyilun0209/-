@@ -1,0 +1,16 @@
+h1 {
+   color: coral; 
+}
+
+.linkstyle a {
+    font-size: 30px;
+}
+.linkstyle a:hover {
+    color: dodgerblue;
+}
+.tablestyle {
+    width: 200px;
+    height: 200px;
+    border: 8px  #FFD382 groove;
+    text-align: center;
+}

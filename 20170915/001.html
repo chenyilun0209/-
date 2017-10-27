@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en"> <!--語言英文版,zh-TW為台灣版-->
+<head>
+    <meta charset="UTF-8"> <!--//meta資料元,charset語系編碼,UTF-8萬國碼-->
+    <title>網頁設計</title>
+    
+    <!--外部CSS-->
+    <link rel="stylesheet" href="style.css">
+    
+    <!--網路字體,Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+    
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanstc.css">
+    
+    <!--內部CSS-->
+    <style>
+        h2 { 
+            color: darkcyan; 
+        }
+        .class {
+            color: crimson;
+        }
+        #id_fontsize {
+            color: cornflowerblue;
+            font-size: 12pt;
+           /* 12pt=16px=1em */
+        }
+        .txtalign {
+            color: #ffd800;
+            text-align: justify;
+        }
+        a {
+            text-decoration: none;
+        }
+        .txt1 {
+            color: red;
+            font-family: arial, "微軟正黑體";
+        }
+        .txt2 {
+            font-family: "Nothing You Could Do";
+        }
+        .txt3 {
+            font-family: "Noto Sans Tc";
+        }
+    </style>
+</head>
+<body>
+    <h1>標題一</h1><!--以標題等級去使用-->
+    <h2>標題二</h2>
+    <h3 class="class">標題三</h3>
+    <h4>標題四</h4>
+    <h5>標題五</h5>
+    <h6>標題六</h6>
+    
+    <hr>
+    <h1>沒福見著你的父親，她多疼你！</h1>
+    <p class="txtalign"> <!--亂數假文-->
+        她們不僅永遠把你放在她們心坎的底裏，你愛好音樂的故事，與他一樣，我只是悵惘我只能問。萊因河與揚子江，並且在他活潑的神情裏我想見了你，與他一樣，遠山上不起靄，你便蓋沒了你的小耳，卻偏不作聲，但在澄靜的日光下，像你倒真是聰明，比如去一果子園，小馬，昨天我是個孩子，梨夢湖與西子湖，我敢說，我們還是不能選擇取由的途徑到那天我們無形的解差喝住的時候，她多疼你！
+    </p>
+    <hr>
+    <h2>Lorem ipsum dolor sit amet</h2>
+    <p id="id_fontsize">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dicta repellendus delectus earum vel, illo laborum eum vitae nemo minima ut dolor, nobis aut voluptatum ex incidunt, necessitatibus cum. Excepturi?
+    </p>
+    <hr><br>
+    
+    <img src="img/001.jpg" alt="cake" title="圖片說明" width="600">
+    <hr><br>
+    
+    <span class="linkstyle">
+    <a href="http://google.com" target="_blank" title="Google" >Google</a>
+    </span>
+    <hr><br>
+    
+    <ul type="square"> <!--符號清單-->
+        <li>清單1</li>
+        <li>清單2</li>
+        <li>清單2</li>
+    </ul>
+    <ol type="A"> <!--數字清單-->
+        <li>清單1</li>
+        <li>清單2</li>
+        <li>清單3</li>
+    </ol>
+    <hr><br>
+    
+    <table border="1" class="tablestyle"> <!--border框-->
+        <tr>
+            <!--<th>1</th>--> <!--<th>為標題-->
+            <th colspan="2">2</th> <!--colspan欄合併-->
+            <th>3</th>
+        </tr>
+        <tr>
+            <td rowspan="2">4</td> <!--rowspan列合併-->
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <!--<td>7</td>-->
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+    <hr><br>
+    
+    <h1 class="txt1">泰勒斯 Look What You Make Me Do</h1>
+    <p class="txt2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dicta repellendus delectus earum vel, illo laborum eum vitae nemo minima ut dolor, nobis aut voluptatum ex incidunt, necessitatibus cum. Excepturi?
+    </p>
+    <hr><br>
+    
+    <h1>沒福見著你的父親，她多疼你！</h1>
+    <p class="txt3">
+        她們不僅永遠把你放在她們心坎的底裏，你愛好音樂的故事，與他一樣，我只是悵惘我只能問。萊因河與揚子江，並且在他活潑的神情裏我想見了你，與他一樣，遠山上不起靄，你便蓋沒了你的小耳，卻偏不作聲，但在澄靜的日光下，像你倒真是聰明，比如去一果子園，小馬，昨天我是個孩子，梨夢湖與西子湖，我敢說，我們還是不能選擇取由的途徑到那天我們無形的解差喝住的時候，她多疼你！
+    </p>
+    <hr><br>
+    
+    
+</body>
+</html>
