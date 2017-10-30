@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap-2</title>
+    <!--文字圖形-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!--套用bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <style>
+        #works,
+        #banner,
+        #services,
+        #about,
+        #news,
+        #contact {
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+        
+        #puchase,
+        #sponsor,
+        footer {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        
+        header {
+            background-image: url(img/027.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        header .row {
+            height: 600px;
+        }
+        
+        nav a {
+            font-size: 1.3em;
+        }
+        
+        nav .navbar-brand {
+            font-size: 1.8em;
+        }
+        
+        #banner {
+            background-image: url(img/026.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        #services .col-md-4 {
+            padding: 15px;
+        }
+        
+        #about .col-md-4 {
+            padding: 15px;
+        }
+        
+        #about img {
+            padding: 5px;
+            border: #b4b4b4 4px double;
+            margin-bottom: 15px;
+        }
+        
+        #puchase {
+            background-image: url(img/028.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        #puchase a {
+            text-decoration: none;
+        }
+        
+        #puchase a:hover {
+            background-color: #797979;
+        }
+        
+        #news img {
+            margin-bottom: 15px;
+        }
+        footer img {
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+        <a class="navbar-brand" href="#">TIMEOUT</a>
+        <!-- navbar-toggler摺疊NAV， data-target="#navi"抓取id-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navi">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id=navi>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline pull-xs-right">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <header class="jumbotron-fluid bg-primary">
+        <!-- jumbotron-fluid滿版header -->
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mx-auto text-center">
+                    <h1 class="text-black">TIMEOUT</h1>
+                    <p class="lead text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" id="works">
+        <div class="text-center">
+            <!-- justify-content-md-center對齊置中 -->
+            <h2>We Provide Awesome Digital Soultions<br> With a Great Attention to Details</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cupiditate, consequatur, ab, atque sed fugiat voluptatum laboriosam impedit possimus quia, mollitia necessitatibus neque praesentium. Maiores doloribus minus, placeat laborum asperiores!</p>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="banner"></div>
+
+    <div class="container" id="services">
+        <div class="text-center mb-5">
+            <!-- text-center文字置中 -->
+            <h2>BEST SERVICES</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, neque.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="icon/service-1.png" alt="">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel molestias unde eveniet sit?</p>
+            </div>
+            <div class="col-md-4">
+                <img src="icon/service-2.png" alt="">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel molestias unde eveniet sit?</p>
+            </div>
+            <div class="col-md-4">
+                <img src="icon/service-3.png" alt="">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel molestias unde eveniet sit?</p>
+            </div>
+            <div class="col-md-4">
+                <img src="icon/service-4.png" alt="">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel molestias unde eveniet sit?</p>
+            </div>
+            <div class="col-md-4">
+                <img src="icon/service-5.png" alt="">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel molestias unde eveniet sit?</p>
+            </div>
+            <div class="col-md-4">
+                <img src="icon/service-6.png" alt="">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel molestias unde eveniet sit?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="banner"></div>
+
+    <div class="container text-center" id="about">
+        <div class="mb-5">
+            <!-- text-center文字置中 -->
+            <h2>ABOUT US</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, neque.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="icon/about-1.png" class="img-fluid" alt="">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="col-md-4">
+                <img src="icon/about-2.png" class="img-fluid" alt="">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="col-md-4">
+                <img src="icon/about-3.png" class="img-fluid" alt="">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-center" id="puchase">
+        <div class="container">
+            <h2 class="text-light mb-4">Are you ready to enjoy? Grab this Pefert Theme now!</h2>
+            <a href="#" class="d-inline-block p-3 border rounded border-light text-light">PUCHASE NOW</a>
+        </div>
+    </div>
+
+    <div class="container" id="news">
+        <div class="text-center mb-5">
+            <h2>NEWS</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, neque.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mb-5">
+                <img src="img/025.jpg" class="img-fluid" alt="">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet dolore dolorum vel quisquam veritatis!</p>
+                <a href="#" class="text-dark">READ MORE ></a>
+            </div>
+            <div class="col-md-3 mb-5">
+                <img src="img/025.jpg" class="img-fluid" alt="">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet dolore dolorum vel quisquam veritatis!</p>
+                <a href="#" class="text-dark">READ MORE ></a>
+            </div>
+            <div class="col-md-3 mb-5">
+                <img src="img/025.jpg" class="img-fluid" alt="">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet dolore dolorum vel quisquam veritatis!</p>
+                <a href="#" class="text-dark">READ MORE ></a>
+            </div>
+            <div class="col-md-3 mb-5">
+                <img src="img/025.jpg" class="img-fluid" alt="">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet dolore dolorum vel quisquam veritatis!</p>
+                <a href="#" class="text-dark">READ MORE ></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-dark" id="sponsor">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-2 col-sm-4 col-6">
+                <img src="icon/sponsor-1.png" class="img-fluid w-50" alt="">
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <img src="icon/sponsor-2.png" class="img-fluid w-50" alt="">
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <img src="icon/sponsor-3.png" class="img-fluid w-50" alt="">
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <img src="icon/sponsor-4.png" class="img-fluid w-50" alt="">
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <img src="icon/sponsor-5.png" class="img-fluid w-50" alt="">
+                </div>
+                <div class="col-md-2 col-sm-4 col-6">
+                    <img src="icon/sponsor-6.png" class="img-fluid w-50" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="contact">
+        <div class="text-center mb-5">
+            <h2>CONTACT</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, neque.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-5">
+                <div class="mb-5">
+                    <h3>INFORMATION</h3>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-sm-1">
+                        <span class="fa fa-home"></span>
+                    </div>
+                    <div class="col-sm-11">
+                        <ul class="list-unstyled">
+                            <li>California CA</li>
+                            <li>Afela inc.</li>
+                            <li>48792</li>
+                            <li>Star Apple st. 54</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-sm-1">
+                        <span class="fa fa-phone"></span>
+                    </div>
+                    <div class="col-sm-11">(+886)980 222 333</div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-sm-1">
+                        <span class="fa fa-envelope-o"></span>
+                    </div>
+                    <div class="col-sm-11">afelacom@gmail.com</div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <form>
+                    <div class="form-group row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="E-mail">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="10" placeholder="Message"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-info">SEND MESSAGE</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid text-center bg-dark">
+        <div class="container">
+            <div class="mb-4 text-light">
+            <h3>AFELA</h3>
+        </div>
+        <div class="row justify-content-center mb-3">
+            <div class="">
+                <img src="icon/footer-1.png" class="img-fluid" alt="">
+            </div>
+            <div class="">
+                <img src="icon/footer-2.png" class="img-fluid" alt="">
+            </div>
+            <div class="">
+                <img src="icon/footer-3.png" class="img-fluid" alt="">
+            </div>
+            <div class="">
+                <img src="icon/footer-4.png" class="img-fluid" alt="">
+            </div>
+            <div class="">
+                <img src="icon/footer-5.png" class="img-fluid" alt="">
+            </div>
+        </div>
+        <div class="text-light">
+            <p><span class="fa fa-copyright"></span>2017 Afela | Designed by Lun</p>
+        </div>
+        </div>
+    </footer>
+</body>
+
+</html>
