@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RWD</title>
+    <style>
+        * {
+            font-family: tahoma;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        @media screen and (min-width:1200px) {
+            .wrapper {
+                width: 1200px;
+                
+                margin: auto;
+            }
+            .col-4 {
+                width: 25%; /*分成四欄*/
+                padding: 10px;
+                float: left;
+            }
+            
+        }
+        @media screen and (max-width:1200px) {
+            .wrapper {
+                width: 100%;
+            }
+            .col-4 {
+                width: 50%; /*分成兩欄*/
+                padding: 10px;
+                float: left;
+            }
+        }
+        @media screen and (max-width:480px) {
+            .wrapper {
+                width: 100%;
+            }
+            .col-4 {
+                width: 100%; /*分成一欄*/
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <div class="wrapper">
+            <div class="col-4">
+                <h2>TITLE1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda non, reprehenderit porro soluta nam hic esse suscipit enim maiores ab quo natus, eligendi maxime. Expedita quos vitae temporibus, harum natus.</p>
+            </div>
+            <div class="col-4">
+                <h2>TITLE2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda non, reprehenderit porro soluta nam hic esse suscipit enim maiores ab quo natus, eligendi maxime. Expedita quos vitae temporibus, harum natus.</p>
+            </div>
+            <div class="col-4">
+                <h2>TITLE3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda non, reprehenderit porro soluta nam hic esse suscipit enim maiores ab quo natus, eligendi maxime. Expedita quos vitae temporibus, harum natus.</p>
+            </div>
+            <div class="col-4">
+                <h2>TITLE4</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda non, reprehenderit porro soluta nam hic esse suscipit enim maiores ab quo natus, eligendi maxime. Expedita quos vitae temporibus, harum natus.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="wrapper">
+            <div class="col-4">
+                <img src="img/026.jpg">
+            </div>
+            <div class="col-4">
+                <img src="img/027.jpg">
+            </div>
+            <div class="col-4">
+                <img src="img/028.jpg">
+            </div>
+            <div class="col-4">
+                <img src="img/024.jpg">
+            </div>
+        </div>
+    </div>  
+</body>
+</html>

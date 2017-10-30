@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RED</title>
+    <meta name="viewport" content="width=device-width"> <!--寬度等於裝置寬度-->
+    <style>
+        * {
+            font-family: tahoma;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100%;
+        }
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        @media screen and (min-width:1200px) {
+            .wrapper {
+                width: 1200px;
+                margin: auto;
+            }
+            .col-4 {
+                width: 25%;
+                padding: 10px;
+                float: left;
+            }
+        }
+        @media screen and (min-width:800px) and (max-width:1200px) {
+            .wrapper {
+                width: 800px;
+                margin: auto;
+            }
+            .col-4 {
+                width: 25%;
+                padding: 10px;
+                float: left;
+            }
+        }
+        @media screen and (min-width:480px) and (max-width:800px) {
+            .wrapper {
+                width: 100%
+            }
+            .col-4 {
+                width: 50%;
+                padding: 10px;
+                float: left;
+            }
+        }
+        @media screen and (max-width:480px) {
+            .wrapper {
+                width: 100%
+            }
+            .col-4 {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="col-4">
+                <h2>TITLE1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda non, reprehenderit porro soluta nam hic esse suscipit enim maiores ab quo natus, eligendi maxime. Expedita quos vitae temporibus, harum natus.</p>
+            </div>
+            <div class="col-4">
+                <h2>TITLE2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda non, reprehenderit porro soluta nam hic esse suscipit enim maiores ab quo natus, eligendi maxime. Expedita quos vitae temporibus, harum natus.</p>
+            </div>
+            <div class="col-4">
+                <h2>TITLE3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda non, reprehenderit porro soluta nam hic esse suscipit enim maiores ab quo natus, eligendi maxime. Expedita quos vitae temporibus, harum natus.</p>
+            </div>
+            <div class="col-4">
+                <h2>TITLE4</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda non, reprehenderit porro soluta nam hic esse suscipit enim maiores ab quo natus, eligendi maxime. Expedita quos vitae temporibus, harum natus.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
