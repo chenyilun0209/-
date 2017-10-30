@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>card</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        img {
+            width: 100%;
+            height: 100%
+        }
+        /*Y軸旋轉*/
+        .card {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            perspective: 600px;
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+        .card .front { /*正面*/
+            width: 100%;
+            height: 100%;
+            background-color: cadetblue;
+            position: absolute;
+            transition: all 1s;
+        }
+        .card .back { /*反面*/
+            width: 100%;
+            height: 100%;
+            background-color: #c4e7f7;
+            position: absolute;
+            transform: rotateY(180deg); /*先轉180度*/
+            backface-visibility: hidden; /*背面隱藏*/
+            transition: all 1s;
+        }
+        .card:hover .front { /*滑過card的front*/
+            transform: rotateY(180deg);
+        }
+        .card:hover .back { /*滑過card的back*/
+            transform: rotateY(360deg);
+        }
+        
+        /*X軸旋轉*/
+        .card2 {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            perspective: 600px;
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+        .card2 .front { /*正面*/
+            width: 100%;
+            height: 100%;
+            background-color: cadetblue;
+            position: absolute;
+            transition: all 1s;
+        }
+        .card2 .back { /*反面*/
+            width: 100%;
+            height: 100%;
+            background-color: #c4e7f7;
+            position: absolute;
+            transform: rotateX(180deg); /*先轉180度*/
+            backface-visibility: hidden; /*背面隱藏*/
+            transition: all 1s;
+        }
+        .card2:hover .front { /*滑過card的front*/
+            transform: rotateX(180deg);
+        }
+        .card2:hover .back { /*滑過card的back*/
+            transform: rotateX(360deg);
+        }
+        
+        /*X軸旋轉*/
+        .card3 {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            perspective: 600px;
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+        .card3 .front { /*正面*/
+            width: 100%;
+            height: 100%;
+            background-color: cadetblue;
+            position: absolute;
+            transition: all 1s;
+        }
+        .card3 .back { /*反面*/
+            width: 100%;
+            height: 100%;
+            background-color: #c4e7f7;
+            position: absolute;
+            transition: all 1s;
+            transform: translateZ(-50px); /*Z軸移動,向後50px*/
+            opacity: 0;
+        }
+        .card3:hover .front { /*滑過card的front*/
+            transform: translateZ(-50px);
+            opacity: 0;
+        }
+        .card3:hover .back { /*滑過card的back*/
+            transform: translateZ(0px);
+            opacity:100;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="front">
+            <img src="img/008.jpg">
+        </div>
+        <div class="back">
+            <h1>Y軸旋轉</h1>
+        </div>
+    </div>
+    <div class="card2">
+        <div class="front">
+            <img src="img/008.jpg">
+        </div>
+        <div class="back">
+            <h1>X軸旋轉</h1>
+        </div>
+    </div>
+    <div class="card3">
+        <div class="front">
+            <img src="img/008.jpg">
+        </div>
+        <div class="back">
+            <h1>Z軸浮出效果</h1>
+        </div>
+    </div>
+</body>
+</html>

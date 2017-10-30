@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+            position: absolute;
+            margin-top: 600px;
+            margin-left: 200px;
+            transform:skewY(30deg);
+            transition: margin-top 1s,margin-left 1s;
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+            position: absolute;
+            margin-top: 85px;
+            margin-left: 800px;
+            transform:skewY(30deg);
+            opacity: .8;
+        }
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+            position: absolute;
+            margin-top: 200px;
+            margin-left: 600px;
+            transform:skewY(30deg);
+            opacity: .6; /*透明度*/  
+        }
+        .box4 {
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+            position: absolute;
+            margin-top: 85px;
+            margin-left: 600px;
+            transform:skewY(-30deg);
+            opacity: .4; /*透明度*/  
+        }
+        .box5 {
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+            position: absolute;
+            margin-top: 200px;
+            margin-left: 800px;
+            transform:skewY(-30deg);
+            opacity: .2; /*透明度*/  
+        }
+        .box6 {
+            width: 200px;
+            height: 200px;
+            background-color: #a05f5f;
+            position: absolute;
+            margin-top: 500px;
+            margin-left: 800px;
+            transform: perspective(100px)rotateX(30deg);
+            opacity: .2; /*透明度*/  
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+    
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+</body>
+</html>

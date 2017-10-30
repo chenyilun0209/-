@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hex 六面、八面</title>
+    <style>
+        .container {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            perspective: 800px;
+            margin-top: 200px;
+            margin-left: 500px;
+            margin-bottom: 200px;
+            text-align: center;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        @keyframes ro {
+            from {transform: rotateY(0deg)}
+            to {transform: rotateY(-360deg)}
+        }
+
+        .hex {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            animation: ro 8s infinite linear;
+        }
+        .hex div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: .6;
+        }
+        .hex .plane:nth-of-type(1) { background-color: #ffc2c2; }
+        .hex .plane:nth-of-type(2) { background-color: #fdd1a4; }
+        .hex .plane:nth-of-type(3) { background-color: #faf699; }
+        .hex .plane:nth-of-type(4) { background-color: #8dfab3; }
+        .hex .plane:nth-of-type(5) { background-color: #a9ebff; }
+        .hex .plane:nth-of-type(6) { background-color: #adaafc; }
+        
+        .hex .plane:nth-of-type(1) {
+            transform: translateZ(173.2px);           
+        }
+        .hex .plane:nth-of-type(2) {
+            transform: rotateY(60deg)translateZ(173.2px);
+        }
+        .hex .plane:nth-of-type(3) {
+            transform: rotateY(120deg)translateZ(173.2px);
+        }
+        .hex .plane:nth-of-type(4) {
+            transform: rotateY(180deg)translateZ(173.2px);
+        }
+        .hex .plane:nth-of-type(5) {
+            transform: rotateY(240deg)translateZ(173.2px);
+        }
+        .hex .plane:nth-of-type(6) {
+            transform: rotateY(300deg)translateZ(173.2px);
+        }
+        
+        /*八面*/
+        @keyframes ro2 {
+            0% {transform: rotateY(0deg)}
+            6.25% {transform: rotateY(0deg)}
+            12.5% {transform: rotateY(-45deg)}
+            18.75% {transform: rotateY(-45deg)}
+            25% {transform: rotateY(-90deg)}
+            31.25% {transform: rotateY(-90deg)}
+            37.5% {transform: rotateY(-135deg)}
+            43.75% {transform: rotateY(-135deg)}
+            50% {transform: rotateY(-180deg)}
+            56.25% {transform: rotateY(-180deg)}
+            62.5% {transform: rotateY(-225deg)}
+            68.75% {transform: rotateY(-225deg)}
+            75% {transform: rotateY(-270deg)}
+            81.25% {transform: rotateY(-270deg)}
+            87.5% {transform: rotateY(-315deg)}
+            93.75% {transform: rotateY(-315deg)}
+            100% {transform: rotateY(-360deg)}
+        }
+        .hex2 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d; 
+            animation: ro2 20s infinite linear;
+        }
+        .hex2 div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .hex2 .plane:nth-of-type(1) { background-color: #ff7575; }
+        .hex2 .plane:nth-of-type(2) { background-color: #ffb467; }
+        .hex2 .plane:nth-of-type(3) { background-color: #f8f25b; }
+        .hex2 .plane:nth-of-type(4) { background-color: #41ff83; }
+        .hex2 .plane:nth-of-type(5) { background-color: #387dff; }
+        .hex2 .plane:nth-of-type(6) { background-color: #94fbff; }
+        .hex2 .plane:nth-of-type(7) { background-color: #9693ff; }
+        .hex2 .plane:nth-of-type(8) { background-color: #fcaaec; }
+        
+        .hex2 .plane:nth-of-type(1) {
+            transform: translateZ(300px);           
+        }
+        .hex2 .plane:nth-of-type(2) {
+            transform: rotateY(45deg)translateZ(300px);
+        }
+        .hex2 .plane:nth-of-type(3) {
+            transform: rotateY(90deg)translateZ(300px);
+        }
+        .hex2 .plane:nth-of-type(4) {
+            transform: rotateY(135deg)translateZ(300px);
+        }
+        .hex2 .plane:nth-of-type(5) {
+            transform: rotateY(180deg)translateZ(300px);
+        }
+        .hex2 .plane:nth-of-type(6) {
+            transform: rotateY(225deg)translateZ(300px);
+        }
+        .hex2 .plane:nth-of-type(7) {
+            transform: rotateY(270deg)translateZ(300px);
+        }
+        .hex2 .plane:nth-of-type(8) {
+            transform: rotateY(315deg)translateZ(300px);
+        }
+        
+        /*十二面*/
+        .hex3 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d; 
+/*            transform: rotateX(40deg);*/
+            
+        }
+        .hex3 div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: .5;
+        }
+        .hex3 .plane:nth-of-type(1) { background-color: #ff7575; }
+        .hex3 .plane:nth-of-type(2) { background-color: #ffb467; }
+        .hex3 .plane:nth-of-type(3) { background-color: #f8f25b; }
+        .hex3 .plane:nth-of-type(4) { background-color: #41ff83; }
+        .hex3 .plane:nth-of-type(5) { background-color: #387dff; }
+        .hex3 .plane:nth-of-type(6) { background-color: #94fbff; }
+        .hex3 .plane:nth-of-type(7) { background-color: #9693ff; }
+        .hex3 .plane:nth-of-type(8) { background-color: #fcaaec; }
+        .hex3 .plane:nth-of-type(9) { background-color: #f8f25b; }
+        .hex3 .plane:nth-of-type(10) { background-color: #41ff83; }
+        .hex3 .plane:nth-of-type(11) { background-color: #387dff; }
+        .hex3 .plane:nth-of-type(12) { background-color: #94fbff; }
+        
+        .hex3 .plane:nth-of-type(1) {
+            transform: translateZ(374px);           
+        }
+        .hex3 .plane:nth-of-type(2) {
+            transform: rotateY(30deg)translateZ(374px);
+        }
+        .hex3 .plane:nth-of-type(3) {
+            transform: rotateY(60deg)translateZ(374px);
+        }
+        .hex3 .plane:nth-of-type(4) {
+            transform: rotateY(90deg)translateZ(374px);
+        }
+        .hex3 .plane:nth-of-type(5) {
+            transform: rotateY(120deg)translateZ(374px);
+        }
+        .hex3 .plane:nth-of-type(6) {
+            transform: rotateY(150deg)translateZ(374px);
+        }
+        .hex3 .plane:nth-of-type(7) {
+            transform: rotateY(180deg)translateZ(374px);
+        }
+        .hex3 .plane:nth-of-type(8) {
+            transform: rotateY(210deg)translateZ(374px);
+        }
+        .hex3 .plane:nth-of-type(9) {
+            transform: rotateY(240deg)translateZ(374px);
+        }
+        .hex3 .plane:nth-of-type(10) {
+            transform: rotateY(270deg)translateZ(374px);
+        }
+        .hex3 .plane:nth-of-type(11) {
+            transform: rotateY(300deg)translateZ(374px);
+        }
+        .hex3 .plane:nth-of-type(12) {
+            transform: rotateY(330deg)translateZ(374px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hex">
+            <div class="plane"><h1>1</h1></div>
+            <div class="plane"><h1>2</h1></div>
+            <div class="plane"><h1>3</h1></div>
+            <div class="plane"><h1>4</h1></div>
+            <div class="plane"><h1>5</h1></div>
+            <div class="plane"><h1>6</h1></div>
+        </div>
+   </div>
+   <div class="container">
+        <div class="hex2">
+            <div class="plane"><img src="img/022.jpg"></div>
+            <div class="plane"><img src="img/023.jpg"></div>
+            <div class="plane"><img src="img/024.jpg"></div>
+            <div class="plane"><img src="img/025.jpg"></div>
+            <div class="plane"><img src="img/026.jpg"></div>
+            <div class="plane"><img src="img/027.jpg"></div>
+            <div class="plane"><img src="img/028.jpg"></div>
+            <div class="plane"><img src="img/029.jpg"></div>
+        </div>
+   </div>
+   <div class="container">
+        <div class="hex3">
+            <div class="plane"><h1>1</h1></div>
+            <div class="plane"><h1>2</h1></div>
+            <div class="plane"><h1>3</h1></div>
+            <div class="plane"><h1>4</h1></div>
+            <div class="plane"><h1>5</h1></div>
+            <div class="plane"><h1>6</h1></div>
+            <div class="plane"><h1>7</h1></div>
+            <div class="plane"><h1>8</h1></div>
+            <div class="plane"><h1>9</h1></div>
+            <div class="plane"><h1>10</h1></div>
+            <div class="plane"><h1>11</h1></div>
+            <div class="plane"><h1>12</h1></div>
+        </div>
+   </div>
+</body>
+</html>
