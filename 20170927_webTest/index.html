@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanstc.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Ubuntu:500|Raleway" rel="stylesheet">
+    <!--文字圖形-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+        /*CSS Defult*/
+        
+        * {
+            font-family: "Raleway", "Noto Sans Tc";
+            box-sizing: border-box;
+            /*background-color: #c4c4c4;*/
+        }
+        
+        h1,h2,h3,h4,h5,h6,p,ul,ol,il {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        img {
+            /* max-width: 100%; */
+            width: 100%;
+            vertical-align: top;
+        }
+        
+        p {
+            color: #b1b1b1;
+            line-height: 2;
+        }
+        /*****************************************************/
+        /* 區塊Default */
+        
+        .container {
+            width: 100%;
+            /* 滿版 */
+        }
+        
+        .wrapper {
+            width: 1200px;
+            margin: auto;
+        }
+        
+        .wrapper-s {
+            width: 850px;
+            margin: auto;
+        }
+        
+        .col-3 {
+            width: calc(100% / 3);
+            /* Calc計算，三等份 */
+            padding: 15px;
+            float: left;
+        }
+        
+        .col-4 {
+            width: calc(100% / 4);
+            padding: 15px;
+            float: left;
+        }
+        /*****************************************************/
+        
+        nav {
+            background-color: black;
+        }
+        
+        nav li {
+            list-style: none;
+            float: left;
+            /*水平li*/
+        }
+        
+        nav .menu {
+            float: right;
+            line-height: 70px;
+        }
+        
+        nav .logo {
+            float: left;
+            color: #FFF;
+            font-family: "Permanent Marker";
+            font-size: 30px;
+            line-height: 70px;
+        }
+        
+        nav .menu a {
+            display: block;
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        nav .menu a:hover {
+            background-color: #848484;
+        }
+        /*****************************************************/
+        
+        header {
+            background-image: url(img/010.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            height: 700px;
+            display: table;
+        }
+        /*使用假表格做垂直置中*/
+        
+        header .wrapper {
+            display: table-cell;
+            /*不能設定寬度*/
+            vertical-align: middle;
+            color: #FFF;
+        }
+        
+        header h1 {
+            font-size: 60px;
+            letter-spacing: 5px;
+        }
+        /*****************************************************/
+        /*WORKS*/
+        
+        #works {
+            padding-top: 150px;
+            padding-bottom: 150px;
+            text-align: center;
+        }
+        
+        #works h2 {
+            font-size: 30px;
+        }
+        
+        #works p {
+            margin-top: 15px;
+        }
+        /*****************************************************/
+        /*banner*/
+        
+        #banner {
+            background-image: url(img/011.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+        }
+        /*****************************************************/
+        /*SERVICES*/
+        
+        #services {
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+        /*第一個wrapper(標題)置中*/
+        
+        #services .wrapper:nth-of-type(1) {
+            text-align: center;
+        }
+        
+        #services .wrapper:nth-of-type(1) p {
+            margin-top: 15px;
+            margin-bottom: 50px;
+        }
+        
+        #services h2 {
+            font-size: 30px;
+        }
+        
+        #services h3 {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        
+        #services img {
+            width: 80px;
+        }
+        /*****************************************************/
+        /*slider*/
+        
+        #slider {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: black;
+            text-align: center;
+        }
+        
+        #slider .wrapper {
+            width: 600px;
+            height: 300px;
+            position: relative;
+        }
+        
+        #slider .wrapper div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+        
+        #slider .wrapper div img {
+            width: 600px;
+            height: 300px;
+        }
+        /*設定動畫週期*/
+        
+        #slider .wrapper div {
+            /*名字，播放長度，動畫速度linear(速度相同)，動畫播放次數infinite(無限)*/
+            -webkit-animation: round 20s linear infinite;
+            animation: round 20s linear infinite;
+        }
+        
+        @-webkit-keyframes round {
+            5% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+                /* 0 - 1秒 淡入*/
+            }
+            25% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+                /* 1- 5秒靜止*/
+            }
+            30% {
+                opacity: 0;
+                filter: alpha(opacity=0);
+                /* 5-6秒淡出*/
+            }
+        }
+        
+        @keyframes round {
+            5% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+                /* 0 - 1秒 淡入*/
+            }
+            25% {
+                opacity: 1;
+                filter: alpha(opacity=100);
+                /* 1- 5秒靜止*/
+            }
+            30% {
+                opacity: 0;
+                filter: alpha(opacity=0);
+                /* 5-6秒淡出*/
+            }
+        }
+        /*每張圖片進場時間相隔5秒*/
+        
+        #slider .wrapper div:nth-child(4) {
+            -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+        }
+        
+        #slider .wrapper div:nth-child(3) {
+            -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+        }
+        
+        #slider .wrapper div:nth-child(2) {
+            -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+        }
+        
+        #slider .wrapper div:nth-child(1) {
+            -webkit-animation-delay: 15s;
+            animation-delay: 15s;
+        }
+        /*****************************************************/
+        /*slider2*/
+        
+        #slider2 {
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: black;
+            text-align: center;
+        }
+        
+        #slider2 .wrapper {
+            display: inline-block;
+            width: 940px;
+            height: 400px;
+        }
+        
+        #abgneBlock {
+            width: 940px;
+            height: 440px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #000000;
+        }
+        
+        #abgneBlock ul.list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            position: absolute;
+            width: 9999px;
+            height: 100%;
+        }
+        
+        #abgneBlock ul.list li {
+            float: left;
+            width: 938px;
+            height: 100%;
+        }
+        
+        #abgneBlock .list img {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        #abgneBlock ul.playerControl {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            height: 14px;
+        }
+        
+        #abgneBlock ul.playerControl li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            /*滑鼠游標改變*/
+            margin: -5px 2px;
+            background: url(icon/circle.png) no-repeat -20px 0;
+            background-size: cover;
+        }
+        
+        #abgneBlock ul.playerControl li.current {
+            background-position: 0 0;
+        }
+        
+        #abgneBlock .list2 {
+            position: absolute;
+            bottom: 0;
+            left: 410px;
+        }
+        
+        #abgneBlock .list2 li {
+            list-style: none;
+            float: left;
+            width: 21px;
+            height: 21px;
+            background-image: url(icon/circle2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-left: 1px;
+            margin-right: 2px;
+            margin-bottom: 4px;
+        }
+        /*****************************************************/
+        /*ABOUT US*/
+        
+        #aboutUs {
+            padding-top: 150px;
+            padding-bottom: 150px;
+            text-align: center;
+        }
+        
+        #aboutUs .wrapper:nth-of-type(1) p {
+            margin-top: 15px;
+            margin-bottom: 50px;
+        }
+        
+        #aboutUs h2 {
+            font-size: 30px;
+        }
+        
+        #aboutUs h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        #aboutUs .icon {
+            border: 4px double #d1d1d1;
+            padding: 10px;
+        }
+        
+        #aboutUs img {
+            width: 200px;
+        }
+        /*****************************************************/
+        /*JOIN US*/
+        
+        #joinUs {
+            background-image: url(img/012.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            text-align: center;
+            display: table;
+        }
+        /*使用假表格做垂直置中*/
+        
+        #joinUs .wrapper {
+            display: table-cell;
+            /*不能設定寬度*/
+            vertical-align: middle;
+            color: #FFF;
+        }
+        
+        #joinUs .wrapper-s .btn {
+            display: inline-block;
+            width: 150px;
+            height: 40px;
+            border: 2px solid #FFF;
+            margin-top: 15px;
+            line-height: 40px;
+            /*btn裡文字垂直置中*/
+        }
+        
+        #joinUs .wrapper a {
+            text-decoration: none;
+            color: #FFF;
+        }
+        
+        #joinUs .wrapper .btn:hover {
+            background-color: #848484;
+        }
+        /*****************************************************/
+        /*BLOG*/
+        
+        #blog {
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+        
+        #blog .photo {
+            position: relative;
+            /*設定相對定位*/
+            height: 160px;
+        }
+        
+        #blog img {
+            max-height: 100%;
+        }
+        
+        #blog .photo .date {
+            width: 50px;
+            position: absolute;
+            /*設定絕對定位，在photo左上角*/
+            top: 0px;
+            left: 0px;
+            background-color: #b1b1b1;
+        }
+        
+        #blog .photo .date p {
+            color: #ffffff;
+            text-align: center;
+        }
+        /*第一個wrapper(標題)置中*/
+        
+        #blog .wrapper:nth-of-type(1) {
+            text-align: center;
+        }
+        
+        #blog .wrapper:nth-of-type(1) p {
+            margin-top: 15px;
+            margin-bottom: 50px;
+        }
+        
+        #blog h2 {
+            font-size: 30px;
+        }
+        
+        #blog h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        #blog a {
+            text-decoration: none;
+            color: black;
+        }
+        /*****************************************************/
+        /*sponsor*/
+        
+        #sponsor {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-color: black;
+            text-align: center;
+        }
+        
+        #sponsor .sponsorBox {
+            display: inline-block;
+            width: 100px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        /*****************************************************/
+        /*CONTACT*/
+        
+        #contact {
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+        /*第一個wrapper(標題)置中*/
+        
+        #contact .wrapper:nth-of-type(1) {
+            text-align: center;
+        }
+        
+        #contact .wrapper:nth-of-type(1) p {
+            margin-top: 15px;
+            margin-bottom: 50px;
+        }
+        /*INFORMATION*/
+        
+        #contact .contactLeft {
+            float: left;
+        }
+        
+        #contact .contactLeft table {
+            width: 180px;
+        }
+        
+        #contact .contactLeft tr {
+            display: block;
+            margin: 20px;
+        }
+        
+        #contact .contactLeft td {
+            vertical-align: text-top;
+        }
+        /*文字圖形*/
+        
+        #contact .contactLeft span {
+            margin-right: 10px;
+        }
+        /*表單*/
+        
+        #contact .contactRight {
+            float: right;
+        }
+        /*Name、E-mail*/
+        
+        #contact .contactRight tr:nth-of-type(1) td {
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        /*Message*/
+        
+        #contact .contactRight tr:nth-of-type(2) td {
+            display: block;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        /*btn*/
+        
+        #contact .contactRight tr:nth-of-type(3) td {
+            display: block;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            text-align: left;
+        }
+        
+        #contact .contactRight tr:nth-of-type(1) input {
+            width: 350px;
+            height: 35px;
+        }
+        
+        #contact .contactRight textarea {
+            width: 100%;
+            height: 200px;
+        }
+        
+        #contact .contactRight button {
+            width: 200px;
+            height: 50px;
+            background-color: #6ad3d3;
+            color: white;
+        }
+        /*****************************************************/
+        /*Footer*/
+        
+        footer {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-color: black;
+            text-align: center;
+        }
+        
+        footer .logo {
+            color: #FFF;
+            font-family: "Permanent Marker";
+            font-size: 40px;
+        }
+        
+        footer .footerBox {
+            display: inline-block;
+            width: 30px;
+            margin: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            // 先取得必要的元素並用 jQuery 包裝
+            // 再來取得 $block 的高度及設定動畫時間
+            var $block = $('#abgneBlock'),
+                $slides = $('ul.list', $block),
+                _width = $block.width(),
+                $li = $('li', $slides),
+                _animateSpeed = 600,
+                // 加入計時器, 輪播時間及控制開關
+                timer, _showSpeed = 6000,
+                _stop = false;
+
+            // 產生 li 選項
+            var _str = '';
+            for (var i = 0, j = $li.length; i < j; i++) {
+                // 每一個 li 都有自己的 className = playerControl_號碼
+                _str += '<li class="playerControl_' + (i + 1) + '"></li>';
+            }
+
+            // 產生 ul 並把 li 選項加到其中
+            var $playerControl = $('<ul class="playerControl"></ul>').html(_str).appendTo($slides.parent()).css('left', function() {
+                // 把 .playerControl 移到置中的位置
+                return (_width - $(this).width()) / 2;
+            });
+
+            // 幫 li 加上 click 事件
+            var $playerControlLi = $playerControl.find('li').click(function() {
+                var $this = $(this);
+                $this.addClass('current').siblings('.current').removeClass('current');
+
+                clearTimeout(timer);
+                // 移動位置到相對應的號碼
+                $slides.stop().animate({
+                    left: _width * $this.index() * -1
+                }, _animateSpeed, function() {
+                    // 當廣告移動到正確位置後, 依判斷來啟動計時器
+                    if (!_stop) timer = setTimeout(move, _showSpeed);
+                });
+
+                return false;
+            }).eq(0).click().end();
+
+            // 如果滑鼠移入 $block 時
+            $block.hover(function() {
+                // 關閉開關及計時器
+                _stop = true;
+                clearTimeout(timer);
+            }, function() {
+                // 如果滑鼠移出 $block 時
+                // 開啟開關及計時器
+                _stop = false;
+                timer = setTimeout(move, _showSpeed);
+            });
+
+            // 計時器使用
+            function move() {
+                var _index = $('.current').index();
+                $playerControlLi.eq((_index + 1) % $playerControlLi.length).click();
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="container">
+        <div class="wrapper clearfix">
+            <div class="logo">AFELA</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">WORKS</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">ALL DEMO</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container">
+        <div class="wrapper">
+            <div class="wrapper-s">
+                <h1>AMAZING STUDIO</h1>
+                <p>Flexible and Creative. Meet the New Style</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" id="works">
+        <div class="wrapper-s">
+            <h2>We Provide Awesome Digital Soultions<br> With a Great Attention to Details</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cupiditate, consequatur, ab, atque sed fugiat voluptatum laboriosam impedit possimus quia, mollitia necessitatibus neque praesentium. Maiores doloribus minus, placeat laborum asperiores!</p>
+        </div>
+    </div>
+
+    <div class="container" id="banner"></div>
+
+    <div class="container" id="services">
+        <div class="wrapper">
+            <h2>BEST SERVICES</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, neque.</p>
+        </div>
+        <div class="wrapper clearfix">
+            <div class="col-3">
+                <img src="icon/service-1.png" alt="">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel molestias unde eveniet sit?</p>
+            </div>
+            <div class="col-3">
+                <img src="icon/service-2.png" alt="">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel molestias unde eveniet sit?</p>
+            </div>
+            <div class="col-3">
+                <img src="icon/service-3.png" alt="">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel molestias unde eveniet sit?</p>
+            </div>
+            <div class="col-3">
+                <img src="icon/service-4.png" alt="">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel molestias unde eveniet sit?</p>
+            </div>
+            <div class="col-3">
+                <img src="icon/service-5.png" alt="">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel molestias unde eveniet sit?</p>
+            </div>
+            <div class="col-3">
+                <img src="icon/service-6.png" alt="">
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel molestias unde eveniet sit?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="slider">
+        <div class="wrapper">
+            <div>
+                <img src="img/013.jpg" alt="pure css3 slider" />
+            </div>
+            <div>
+                <img src="img/014.jpg" alt="pure css3 slider" />
+            </div>
+            <div>
+                <img src="img/015.jpg" alt="pure css3 slider" />
+            </div>
+            <div>
+                <img src="img/020.jpg" alt="pure css3 slider" />
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container" id="slider2">
+        <div class="wrapper">
+            <div id="abgneBlock">
+                <ul class="list">
+                    <li><img src="img/014.jpg"></li>
+                    <li><img src="img/015.jpg"></li>
+                    <li><img src="img/016.jpg"></li>
+                    <li><img src="img/017.jpg"></li>
+                    <li><img src="img/018.jpg"></li>
+                </ul>
+                <ul class="list2">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="aboutUs">
+        <div class="wrapper">
+            <h2>ABOUT US</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, neque.</p>
+        </div>
+        <div class="wrapper clearfix">
+            <div class="col-3">
+                <div class="icon"><img src="icon/about-1.png" alt=""></div>
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="col-3">
+                <div class="icon"><img src="icon/about-2.png" alt=""></div>
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="col-3">
+                <div class="icon"><img src="icon/about-3.png" alt=""></div>
+                <h3>Lorem ipsum</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="joinUs">
+        <div class="wrapper">
+            <div class="wrapper-s">
+                <h2>Are you ready to enjoy? Grab this Pefert Theme now!</h2>
+                <div class="btn"><a href="#">PUCHASE NOW</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="blog">
+        <div class="wrapper">
+            <h2>LATAEST NEWS</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, neque.</p>
+        </div>
+        <div class="wrapper clearfix">
+            <div class="col-4">
+                <div class="photo">
+                    <img src="img/016.jpg" alt="">
+                    <div class="date">
+                        <p>14</p>
+                        <p>MAR</p>
+                    </div>
+                </div>
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet dolore dolorum vel quisquam veritatis!</p>
+                <p><a href="#">READ MORE ></a></p>
+            </div>
+            <div class="col-4">
+                <div class="photo">
+                    <img src="img/017.jpg" alt="">
+                    <div class="date">
+                        <p>14</p>
+                        <p>MAR</p>
+                    </div>
+                </div>
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet dolore dolorum vel quisquam veritatis!</p>
+                <p><a href="#">READ MORE ></a></p>
+            </div>
+            <div class="col-4">
+                <div class="photo">
+                    <img src="img/018.jpg" alt="">
+                    <div class="date">
+                        <p>14</p>
+                        <p>MAR</p>
+                    </div>
+                </div>
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet dolore dolorum vel quisquam veritatis!</p>
+                <p><a href="#">READ MORE ></a></p>
+            </div>
+            <div class="col-4">
+                <div class="photo">
+                    <img src="img/019.jpg" alt="">
+                    <div class="date">
+                        <p>14</p>
+                        <p>MAR</p>
+                    </div>
+                </div>
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet dolore dolorum vel quisquam veritatis!</p>
+                <p><a href="#">READ MORE ></a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="sponsor">
+        <div class="wrapper">
+            <div class="sponsorBox"><img src="icon/sponsor-1.png" alt=""></div>
+            <div class="sponsorBox"><img src="icon/sponsor-2.png" alt=""></div>
+            <div class="sponsorBox"><img src="icon/sponsor-3.png" alt=""></div>
+            <div class="sponsorBox"><img src="icon/sponsor-4.png" alt=""></div>
+            <div class="sponsorBox"><img src="icon/sponsor-5.png" alt=""></div>
+            <div class="sponsorBox"><img src="icon/sponsor-6.png" alt=""></div>
+        </div>
+    </div>
+
+    <div class="container" id="contact">
+        <div class="wrapper">
+            <h2>CONTACT</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, neque.</p>
+        </div>
+        <div class="wrapper clearfix">
+            <div class="contactLeft">
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <h3>INFORMATION</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="fa fa-home"></span></td>
+                        <td>
+                            <p>California CA Afela inc. 48792 Star Apple st. 54</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="fa fa-phone"></span></td>
+                        <td>
+                            <p>(+886)980 222 333</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="fa fa-envelope-o"></span></td>
+                        <td>
+                            <p>afelacom@gmail.com</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="contactRight">
+                <table>
+                    <tr>
+                        <td><input type="text" placeholder="Name"></td>
+                        <td><input type="email" placeholder="E-mail"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <textarea placeholder="Message"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="button">SEND MESSAGE</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container">
+        <div class="wrapper-s">
+            <div class="logo">AFELA</div>
+        </div>
+        <div class="wrapper-s">
+            <div class="footerBox"><img src="icon/footer-1.png" alt=""></div>
+            <div class="footerBox"><img src="icon/footer-2.png" alt=""></div>
+            <div class="footerBox"><img src="icon/footer-3.png" alt=""></div>
+            <div class="footerBox"><img src="icon/footer-4.png" alt=""></div>
+            <div class="footerBox"><img src="icon/footer-5.png" alt=""></div>
+        </div>
+        <div class="wrapper-s">
+            <p><span class="fa fa-copyright"></span>2017 Afela | Designed by Lun</p>
+        </div>
+    </footer>
+</body>
+</html>
