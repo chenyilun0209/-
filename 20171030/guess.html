@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="n">
+    <button onclick="guess()">猜猜猜</button>
+    <div id="output"></div>
+    <script>
+        var ans = Math.round(Math.random()*100);
+        console.log(ans);
+        
+        function guess() {
+            var n = document.getElementById("n").value;
+            console.log(n);
+            if(isNaN(n)) {
+                //isNaN 判斷是否為數字
+                alert("請輸入1~100的數值");
+            }
+            else{
+                if(n > 100 || n < 0){
+                    alert("請輸入1~100的數值");
+                }
+                else {
+                    if(n > ans) {
+                        document.getElementById("output").innerHTML = "小一點!";
+                    }
+                    else if(n < ans) {
+                        document.getElementById("output").innerHTML = "大一點!";
+                    }
+                    else if(n == ans) {
+                        //document.getElementById("output").innerHTML = "猜對了~";
+                        alert("猜對了",location.reload()); //location.reload()重新整理
+                    }
+                }
+                
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = 100;
+        var array = ["html", "CSS", "javascript"];
+        console.log(array[0]);
+        console.log(array[1]);
+        console.log(array[2]);
+        
+        var a = array.length; //陣列長度
+        console.log(a);
+        
+        array.push("PHP");
+        console.log(array);
+        var b = array.length;
+        console.log(array);
+        
+        for(var i =0; i < array.length; i++)
+            {
+                console.log(array[i]);
+            }
+        
+        var s = array.join(","); //將陣列之間加入","並以字串方式印出
+        console.log(s);
+        
+        var j = array.slice(3,4); //抓取指定位置的陣列值
+        console.log(j);
+        
+        //array.pop(); //移除陣列最後一個值，並回傳被刪除的值
+        console.log(array.pop());
+        
+        //array.shift();
+        console.log(array.shift()); //移除陣列第一個值，並回傳被刪除的值
+        
+        array.unshift("HI"); //增加值至陣列開頭
+        console.log(array);
+        
+        
+    </script>
+</body>
+</html>
