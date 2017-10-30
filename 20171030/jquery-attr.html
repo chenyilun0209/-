@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>attr屬性</title>
+    <style>
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var att = $("a").attr("href"); //抓取元素的屬性
+            console.log(att);
+            att = $("a").attr("target");
+            console.log(att);
+            
+            $("#img1").click(function() {
+               var w = $(this).attr("width",400); //更換屬性
+                console.log(w);
+            });
+            $("#img2").click(function() {
+               var w1 = $(this).attr("src","img/027.jpg"); //更換屬性
+                console.log(w1);
+            });
+        }); 
+    </script>
+</head>
+<body>
+    <a href="http://google.com" target="_blank">link</a><br>
+    <img id="img1" alt="" src="img/026.jpg" width="200"><br>
+    <img id="img2" alt="" src="img/026.jpg" width="200">
+</body>
+</html>

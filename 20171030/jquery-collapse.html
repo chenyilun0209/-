@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>collapse點擊圖片置換</title>
+    <style>
+        h1,h2,p {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 700px;
+            margin: auto;
+        }
+        h2 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #9a9a9a;
+            border-bottom: 1px solid #aaa;
+        }
+        p {
+            padding: 30px;
+            line-height: 2em;
+            background-color: #d8d8d8;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            background-color: #9a9a9a;
+            border-bottom: 1px solid #aaa;
+            color: black;
+        }
+        a:hover {
+            color: aliceblue;
+        }
+        a:focus {
+            color: aliceblue;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        //讓這份頁面準備好(先執行)
+        $(document).ready(function(){
+            $("h2").click(function(){
+                $(this).next().slideToggle();
+            });
+            $("a").click(function(){
+                $(this).next().slideToggle();
+            });
+            $("p").hide();
+        }); 
+    </script>
+    <div class="container">
+        <h1>HELLO</h1>
+    <br>
+    <h2>TITLE</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit suscipit tenetur explicabo aliquid ipsum hic, officia fuga assumenda quod obcaecati nobis id quaerat. Optio libero iure voluptatum officia placeat molestiae.
+    </p>
+    <a href="#"><h2>TITLE</h2></a>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit suscipit tenetur explicabo aliquid ipsum hic, officia fuga assumenda quod obcaecati nobis id quaerat. Optio libero iure voluptatum officia placeat molestiae.
+    </p>
+    <a href="#"><h2>TITLE</h2></a>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit suscipit tenetur explicabo aliquid ipsum hic, officia fuga assumenda quod obcaecati nobis id quaerat. Optio libero iure voluptatum officia placeat molestiae.
+    </p>
+    </div>
+    
+</body>
+</html>

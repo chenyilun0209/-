@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>點擊圖片置換</title>
+    <style>
+        .container {
+            width: 100%;
+            margin: auto;
+            text-align: center
+        }
+        #gallery img {
+            width: 1000px;
+        }
+        #thumbs img {
+            width: 190px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //.find("a")找到#thumbs的<a>,點擊後
+            $("#thumbs").find("a").click(function() {
+                //宣告i,存放點擊後，抓取的src值
+                var i = $(this).find("img").attr("src");
+                //抓取#gallery的<img>的src,置換成i
+                $("#gallery").find("img").attr("src", i);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="gallery">
+            <img alt="" src="img/024.jpg">
+        </div>
+        <div id="thumbs">
+            <a href="#"><img alt="" src="img/024.jpg"></a>
+            <a href="#"><img alt="" src="img/025.jpg"></a>
+            <a href="#"><img alt="" src="img/026.jpg"></a>
+            <a href="#"><img alt="" src="img/027.jpg"></a>
+            <a href="#"><img alt="" src="img/028.jpg"></a>
+        </div>
+    </div>
+
+</body>
+</html>

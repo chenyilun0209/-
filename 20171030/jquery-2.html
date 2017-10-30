@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>toggle()</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        //讓這份頁面準備好(先執行)
+        $(document).ready(function(){
+            $("h1").hide(); //.hide()隱藏
+            $("#toggle").click(function(){
+                $("#p1").toggle(); //顯示隱藏
+            });
+            $("#fadeToggle").click(function(){
+                $("#p2").fadeToggle(600); //淡出淡入
+            });
+            $("#slideToggle").click(function(){
+                $("#p3").slideToggle(600); //滑出滑入
+            });
+        }); 
+    </script>
+    <h1>QWERT</h1>
+    <br>
+    <h2 id="toggle">Click toggle</h2>
+    <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit suscipit tenetur explicabo aliquid ipsum hic, officia fuga assumenda quod obcaecati nobis id quaerat. Optio libero iure voluptatum officia placeat molestiae.</p>
+    <h2 id="fadeToggle">Click fadeToggle</h2>
+    <p id="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit suscipit tenetur explicabo aliquid ipsum hic, officia fuga assumenda quod obcaecati nobis id quaerat. Optio libero iure voluptatum officia placeat molestiae.</p>
+    <h2 id="slideToggle">Click slideToggle</h2>
+    <p id="p3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit suscipit tenetur explicabo aliquid ipsum hic, officia fuga assumenda quod obcaecati nobis id quaerat. Optio libero iure voluptatum officia placeat molestiae.</p>
+</body>
+</html>

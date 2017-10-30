@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滑動展開區塊+滑動圖片置換</title>
+    <style>
+        h1,h2,p {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 700px;
+            margin: auto;
+        }
+        .container p {
+            padding: 30px;
+            line-height: 2em;
+            background-color: #d8d8d8;
+        }
+        .container a {
+            display: block;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-decoration: none;
+            background-color: #9a9a9a;
+            border-bottom: 1px solid #aaa;
+            color: black;
+        }
+        .container a:hover {
+            color: aliceblue;
+        }
+        .container a:focus {
+            color: aliceblue;
+        }
+        /*******************************************/
+        .container2 {
+            width: 100%;
+            margin: auto;
+            text-align: center
+        }
+        #gallery img {
+            width: 1000px;
+        }
+        #thumbs img {
+            width: 190px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //當滑鼠滑到a
+            $(".title").hover(function(){
+                //多加一個 .stop() 代表滑出時會停止
+                $(this).next().stop().slideToggle();
+            });
+            $("p").hide();
+            
+            //.find("a")找到#thumbs的<a>,點擊後
+            $("#thumbs").find("a").hover(function() {
+                //宣告i,存放點擊後，抓取的src值
+                var i = $(this).find("img").attr("src");
+                //抓取#gallery的<img>的src,置換成i
+                $("#gallery").find("img").attr("src", i);
+            });
+        }); 
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>滑動展開</h1>
+    <br>
+    <a href="#" class="title"><h2>TITLE</h2></a>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit suscipit tenetur explicabo aliquid ipsum hic, officia fuga assumenda quod obcaecati nobis id quaerat. Optio libero iure voluptatum officia placeat molestiae.
+    </p>
+    <a href="#" class="title"><h2>TITLE</h2></a>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit suscipit tenetur explicabo aliquid ipsum hic, officia fuga assumenda quod obcaecati nobis id quaerat. Optio libero iure voluptatum officia placeat molestiae.
+    </p>
+    <a href="#" class="title"><h2>TITLE</h2></a>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit suscipit tenetur explicabo aliquid ipsum hic, officia fuga assumenda quod obcaecati nobis id quaerat. Optio libero iure voluptatum officia placeat molestiae.
+    </p>
+    </div>
+    <br><br><br><br><hr><br><br><br><br>
+    
+    <div class="container2">
+       <h1>滑動圖片顯示</h1>
+        <div id="gallery">
+            <img alt="" src="img/024.jpg">
+        </div>
+        <div id="thumbs">
+            <a href="#"><img alt="" src="img/024.jpg"></a>
+            <a href="#"><img alt="" src="img/025.jpg"></a>
+            <a href="#"><img alt="" src="img/026.jpg"></a>
+            <a href="#"><img alt="" src="img/027.jpg"></a>
+            <a href="#"><img alt="" src="img/028.jpg"></a>
+        </div>
+    </div>
+</body>
+</html>
